@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta Description -->
+    <meta
+      name="description"
+      content="A to-do list app is a digital tool designed to help users manage and organize their tasks efficiently."
+    />
+    <!-- Main Css File -->
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- App Title -->
+    <title>Todo App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="stats-container">
+        <div class="details">
+          <h1>Todo App</h1>
+          <p>Keep It Up!</p>
+          <div id="progress-bar">
+            <div id="progress"></div>
+          </div>
+        </div>
+
+        <div class="stats-numbers">
+          <p id="numbers">0 / 0</p>
+        </div>
+      </div>
+
+      <form>
+        <input
+          type="text"
+          placeholder="Write your task here..."
+          id="task-input"
+        />
+        <button id="add-task" type="submit">+</button>
+      </form>
+
+      <ul id="tasks-list"></ul>
+
+      <div id="notifications"></div>
+    </div>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
