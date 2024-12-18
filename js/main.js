@@ -132,14 +132,17 @@ document.getElementById("add-task").addEventListener("click", (e) => {
 //* Check If the Task is already Exist *//
 const checkInput = (inputValue) => {
   let status = false;
-  const currentTasks = JSON.parse(localStorage.getItem("tasks"));
 
-  currentTasks.forEach((task) => {
-    if (inputValue.toLowerCase() === task.text.toLowerCase()) {
-      notification("This Task Is Already Exist", "warning");
-      status = true;
-    }
-  });
+  if (localStorage.getItem("tasks")) {
+    const currentTasks = JSON.parse(localStorage.getItem("tasks"));
+
+    currentTasks.forEach((task) => {
+      if (inputValue.toLowerCase() === task.text.toLowerCase()) {
+        notification("This Task Is Already Exist", "warning");
+        status = true;
+      }
+    });
+  }
 
   return status;
 };
